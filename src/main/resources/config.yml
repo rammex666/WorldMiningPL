@@ -6,3 +6,8 @@ worlds:
 
 
 messages:
+  deleteIn5s: "§cAttention ! Le monde {world} sera réinitialisé dans 5 secondes !"
+  deleteIn3s: "§cAttention ! Le monde {world} sera réinitialisé dans 3 seconde !"
+  deleteIn2s: "§cAttention ! Le monde {world} sera réinitialisé dans 2 seconde !"
+  deleteIn1s: "§cAttention ! Le monde {world} sera réinitialisé dans 1 seconde !"
+  worldReset: "§aLe monde {world} a été réinitialisé !"

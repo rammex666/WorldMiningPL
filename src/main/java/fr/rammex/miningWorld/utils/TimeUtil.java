@@ -12,25 +12,25 @@ public class TimeUtil {
     public void resetWorldWithWarning(String worldName, int timeInSeconds) {
         Bukkit.getScheduler().runTaskLater(MiningWorld.getInstance(), () -> {
             for (Player player : Bukkit.getOnlinePlayers()) {
-                player.sendMessage("§cAttention ! Le monde " + worldName + " sera réinitialisé dans 5 secondes !");
+                player.sendMessage(MiningWorld.getInstance().getConfig().getString("messages.deleteIn5s").replace("{world}", worldName));
             }
         }, (long) (timeInSeconds - 5) * 20);
 
         Bukkit.getScheduler().runTaskLater(MiningWorld.getInstance(), () -> {
             for (Player player : Bukkit.getOnlinePlayers()) {
-                player.sendMessage("§cAttention ! Le monde " + worldName + " sera réinitialisé dans 3 secondes !");
+                player.sendMessage(MiningWorld.getInstance().getConfig().getString("messages.deleteIn3s").replace("{world}", worldName));
             }
         }, (long) (timeInSeconds - 3) * 20);
 
         Bukkit.getScheduler().runTaskLater(MiningWorld.getInstance(), () -> {
             for (Player player : Bukkit.getOnlinePlayers()) {
-                player.sendMessage("§cAttention ! Le monde " + worldName + " sera réinitialisé dans 2 secondes !");
+                player.sendMessage(MiningWorld.getInstance().getConfig().getString("messages.deleteIn2s").replace("{world}", worldName));
             }
         }, (long) (timeInSeconds - 2) * 20);
 
         Bukkit.getScheduler().runTaskLater(MiningWorld.getInstance(), () -> {
             for (Player player : Bukkit.getOnlinePlayers()) {
-                player.sendMessage("§cAttention ! Le monde " + worldName + " sera réinitialisé dans 1 secondes !");
+                player.sendMessage(MiningWorld.getInstance().getConfig().getString("messages.deleteIn1s").replace("{world}", worldName));
             }
         }, (long) (timeInSeconds - 1) * 20);
 
@@ -42,7 +42,7 @@ public class TimeUtil {
             resetWorldWithWarning(worldName, timeInSeconds);
 
             for (Player player : Bukkit.getOnlinePlayers()) {
-                player.sendMessage("§cLe monde " + worldName + " a été réinitialisé !");
+                player.sendMessage(MiningWorld.getInstance().getConfig().getString("messages.worldReset").replace("{world}", worldName));
             }
         }, (long) timeInSeconds * 20);
     }
