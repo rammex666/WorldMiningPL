@@ -1,0 +1,7 @@
+name: MiningWorld
+version: '1.0'
+main: fr.rammex.miningWorld.MiningWorld
+api-version: '1.21'
+commands:
+  mwpl:
+    permission: miningworld.command.mwpl

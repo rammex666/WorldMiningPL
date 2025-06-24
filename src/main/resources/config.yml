@@ -1,0 +1,8 @@
+worlds:
+  test:
+    name: "Test World"
+    seed: "2786386421968123439"
+    timeBeforeReset: 86400 # 1 day in seconds
+
+
+messages:
