@@ -32,9 +32,18 @@ Exemple de configuration dans `config.yml` :
 
 ```yaml
 worlds:
-  - nom: "mining_world"
-    seed: "123456789"
-    reset_interval: 3600 # en secondes
+  test:
+    name: "Test World"
+    seed: "2786386421968123439"
+    timeBeforeReset: 86400 # 1 day in seconds
+
+
+messages:
+  deleteIn5s: "§cAttention ! Le monde {world} sera réinitialisé dans 5 secondes !"
+  deleteIn3s: "§cAttention ! Le monde {world} sera réinitialisé dans 3 seconde !"
+  deleteIn2s: "§cAttention ! Le monde {world} sera réinitialisé dans 2 seconde !"
+  deleteIn1s: "§cAttention ! Le monde {world} sera réinitialisé dans 1 seconde !"
+  worldReset: "§aLe monde {world} a été réinitialisé !"
 ```
 
 <hr></hr>
